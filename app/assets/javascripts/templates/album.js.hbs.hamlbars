@@ -1,0 +1,18 @@
+-# Album
+.album-info
+  %img{:bind => {:src => "artwork"}}
+  %h1= hb "name"
+  %h2= hb "artist"
+
+%table.album-listing
+  = hb %{each songs} do
+    %tr
+      %td.song-track
+        %span.track-number= hb "track"
+      %td.song-name= hb "name"
+      %td.song-duration= hb "duration"
+
+  %tr
+    %td.total-duration(colspan="3")
+      Total Time:
+      40:03

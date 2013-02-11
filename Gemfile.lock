@@ -67,6 +67,13 @@ GEM
     eventmachine (1.0.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    haml (4.0.0.rc.1)
+      tilt
+    hamlbars (2.0.0)
+      execjs (>= 1.2)
+      haml
+      sprockets
+      tilt
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -145,6 +152,8 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
   ember-rails!
+  haml (>= 4.0.0.rc.1)
+  hamlbars (~> 2.0)
   jquery-rails
   mongoid
   rails (= 3.2.11)

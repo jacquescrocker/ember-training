@@ -1,0 +1,5 @@
+%header
+  = hb %{linkTo "index"} do
+    %h1 BuumBox
+
+= hb "outlet"

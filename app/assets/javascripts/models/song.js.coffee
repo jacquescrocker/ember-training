@@ -4,4 +4,4 @@ App.Song = DS.Model.extend
   track: DS.attr("number")
   duration: DS.attr("number")
 
-  # TODO: others
+  album: DS.belongsTo("App.Album")

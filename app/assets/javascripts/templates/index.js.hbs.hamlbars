@@ -1,0 +1,12 @@
+.album-list
+  = hb %{each controller} do
+    .album
+      = hb %{linkTo "album" this} do
+        %img{:bind => {:src => "artwork"}}
+
+      %p.album-name= hb "name"
+      %p.album-artist= hb "artist"
+      %p.song-count
+        {{songs.length}} songs
+        = hb %{if isExplicit} do
+          %span.explicit EXPLICIT

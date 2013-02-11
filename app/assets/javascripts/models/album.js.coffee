@@ -4,4 +4,4 @@ App.Album = DS.Model.extend
   artist: DS.attr("string")
   isExplicit: DS.attr("boolean")
 
-  # TODO: others
+  songs: DS.hasMany("App.Song")

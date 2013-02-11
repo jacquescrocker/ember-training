@@ -29,4 +29,3 @@
 #= require_tree ./fixtures
 
 window.App = Ember.Application.create()
-
