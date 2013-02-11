@@ -17,8 +17,16 @@
 #= require vendor/ember
 #= require vendor/ember-data
 #= require_self
-#= require buumbox
-#= require_tree .
 
-window.Buumbox = Ember.Application.create()
+#= require ./store
+#= require_tree ./models
+#= require_tree ./controllers
+#= require_tree ./views
+#= require_tree ./helpers
+#= require_tree ./templates
+#= require ./router
+#= require_tree ./routes
+#= require_tree ./fixtures
+
+window.App = Ember.Application.create()
 

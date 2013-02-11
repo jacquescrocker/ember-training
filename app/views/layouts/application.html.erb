@@ -5,10 +5,13 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <%= javascript_include_tag "tests/load-tests" %>
 </head>
 <body>
+  <%= yield %>
 
-<%= yield %>
-
+  <div id="qunit" style="display: none"></div>
+  <div id="qunit-fixture" style="display: none"></div>
 </body>
 </html>
