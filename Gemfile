@@ -16,7 +16,8 @@ group :assets do
 
   # emblem fork of ember-rails
   gem 'ember-rails', :git => "git://github.com/machty/ember-rails.git", :branch => "master"
-
+  gem "barber", :git => "git://github.com/tchak/barber.git", :branch => "master"
+  gem "barber-emblem", :git => "git://github.com/machty/barber-emblem.git", :branch => "master"
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
