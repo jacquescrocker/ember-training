@@ -10,9 +10,9 @@
       %td.song-track
         %span.track-number= hb "track"
       %td.song-name= hb "name"
-      %td.song-duration= hb "duration"
+      %td.song-duration= hb "format-duration duration"
 
   %tr
     %td.total-duration(colspan="3")
       Total Time:
-      40:03
+      = hb "format-duration totalDuration"

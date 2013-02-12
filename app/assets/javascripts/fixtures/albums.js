@@ -9,21 +9,21 @@ App.Album.FIXTURES = [{
   artwork: "http://cdn3.rd.io/album/0/1/3/0000000000279310/1/square-200.jpg",
   name: "Dusk to Dawn",
   artist: "Emancipator",
-  songs: [ 21, 22, 23 ]
+  songs: [ 11, 12, 13, 14 ]
 }, {
   id: 3,
   artwork: "http://cdn3.rd.io/album/d/d/5/00000000001e25dd/3/square-200.jpg",
   name: "The Heist",
   artist: "Macklemore & Ryan Lewis",
   isExplicit: true,
-  songs: [ 31, 32, 33 ]
+  songs: [ 11, 12, 13, 14 ]
 }, {
   id: 4,
   artwork: "http://cdn3.rd.io/album/f/0/b/0000000000152b0f/8/square-200.jpg",
   name: "Some Nights",
   artist: "fun.",
   isExplicit: true,
-  songs: [ 41, 42, 43 ]
+  songs: [ 11, 12, 13, 14 ]
 }];
 
 App.Song.FIXTURES = [{

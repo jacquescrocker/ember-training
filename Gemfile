@@ -42,5 +42,24 @@ gem 'jquery-rails'
 # To use debugger
 group :development do
   gem 'debugger'
+
+  # setup guard
+  gem "guard", ">= 1.0.0"
+  gem "guard-coffeescript", ">= 0.4.0"
+  gem "guard-shell"
+  gem "guard-livereload", ">= 0.4.0"
+
+  gem "quiet_assets"
+
+    # for a console, use "bundle exec rails-console-pry"
+  # a nice irb alternative: http://pryrepl.org/
+  gem "rails-console-pry", :require => nil
+
+  gem "rb-fsevent"
+  gem "rb-appscript", "= 0.6.1"
+
+  # use "bundle exec terminitor start" to start the project (opens multiple tabs)
+  gem "terminitor", ">= 0.6.0", git: "https://github.com/railsjedi/terminitor.git"
+
   gem 'thin'
 end
