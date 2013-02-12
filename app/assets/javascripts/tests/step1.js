@@ -12,11 +12,6 @@
         adapter: 'DS.FixtureAdapter'
       });
 
-  After that, include the models we've provided, as well as some fixture
-  data, by adding a script tag to your HTML:
-
-      <script src="js/models.js"></script>
-
   Next, create a route handler for the index template, and make sure
   you set its model to the list of albums.
 

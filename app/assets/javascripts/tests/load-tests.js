@@ -12,14 +12,14 @@ function loadCSS(name) {
 }
 
 function loadTests(number) {
-  loadScript('/assets/tests/vendor/qunit.js');
-  loadScript('/assets/tests/helpers.js');
+  loadScript('tests/vendor/qunit.js');
+  loadScript('tests/helpers.js');
 
   for (var i=1; i<=number; i++) {
-    loadScript('/assets/tests/step' + i + '.js');
+    loadScript('tests/step' + i + '.js');
   }
 
-  loadCSS('/assets/tests/vendor/qunit.css');
+  loadCSS('tests/vendor/qunit.css');
 }
 
 if (~location.search.indexOf('tests=')) {
