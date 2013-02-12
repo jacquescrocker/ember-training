@@ -1,0 +1,5 @@
+header
+  = linkTo "index"
+    h1 BuumBox
+
+= outlet

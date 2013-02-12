@@ -1,0 +1,13 @@
+.album-list
+  each controller
+    .album
+      = linkTo "album" this
+        img{bindAttr src="artwork"}
+
+      p.album-name= name
+      p.album-artist= artist
+      p.song-count
+        = songs.length
+        songs
+        if isExplicit
+          span.explicit EXPLICIT

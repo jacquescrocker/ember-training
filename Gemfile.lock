@@ -1,10 +1,12 @@
 GIT
-  remote: git://github.com/emberjs/ember-rails.git
-  revision: 587a55a8c53aae2193a3602895e89311eb8544b0
+  remote: git://github.com/machty/ember-rails.git
+  revision: ea87a9482dee7063a50034072c2a99d61d031064
+  branch: master
   specs:
     ember-rails (0.9.2)
       active_model_serializers
       barber
+      barber-emblem
       execjs (>= 1.2)
       railties (>= 3.1)
 
@@ -51,6 +53,8 @@ GEM
     arel (3.0.2)
     barber (0.2.0)
       execjs
+    barber-emblem (0.0.1)
+      barber
     bson (1.8.2)
     bson_ext (1.8.2)
       bson (~> 1.8.2)
@@ -94,13 +98,6 @@ GEM
       multi_json (~> 1.0)
     guard-shell (0.5.1)
       guard (>= 1.1.0)
-    haml (4.0.0.rc.1)
-      tilt
-    hamlbars (2.0.0)
-      execjs (>= 1.2)
-      haml
-      sprockets
-      tilt
     hike (1.2.1)
     http_parser.rb (0.5.3)
     i18n (0.6.1)
@@ -202,8 +199,6 @@ DEPENDENCIES
   guard-coffeescript (>= 0.4.0)
   guard-livereload (>= 0.4.0)
   guard-shell
-  haml (>= 4.0.0.rc.1)
-  hamlbars (~> 2.0)
   jquery-rails
   mongoid
   quiet_assets

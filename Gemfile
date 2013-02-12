@@ -5,8 +5,6 @@ gem 'rails', '3.2.11'
 gem 'mongoid'
 gem "bson_ext"
 
-gem "haml", ">= 4.0.0.rc.1"
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -15,9 +13,9 @@ gem "haml", ">= 4.0.0.rc.1"
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'hamlbars', '~> 2.0'
 
-  gem 'ember-rails', :git => "git://github.com/emberjs/ember-rails.git"
+  # emblem fork of ember-rails
+  gem 'ember-rails', :git => "git://github.com/machty/ember-rails.git", :branch => "master"
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
