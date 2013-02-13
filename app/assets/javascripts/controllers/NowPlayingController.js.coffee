@@ -1,0 +1,1 @@
+App.NowPlayingController = Ember.ObjectController.extend({})

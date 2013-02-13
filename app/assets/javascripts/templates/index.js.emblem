@@ -7,8 +7,7 @@
       p.album-name = name
       p.album-artist = artist
       p.song-count
-        = songs.length
-        |  songs
+        | {{songs.length}} songs
 
         if isExplicit
           span.explicit EXPLICIT

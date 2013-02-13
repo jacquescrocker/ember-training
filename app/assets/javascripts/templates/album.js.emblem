@@ -8,10 +8,10 @@ table.album-listing
     tr
       td.song-track
         span.track-number = track
+        span.play{action "playSong" this} ▶
       td.song-name = name
       td.song-duration = format-duration duration
 
   tr
     td.total-duration colspan="3"
-      | Total Time:
-      = format-duration totalDuration
+      | Total Time: {{format-duration totalDuration}}

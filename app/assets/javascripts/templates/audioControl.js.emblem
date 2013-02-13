@@ -1,0 +1,26 @@
+/ TODO: ask Alex how to do single word attributes (like autoplay)
+| <audio autoplay {{bindAttr src="view.src"}}></audio>
+
+/ like this maybe?
+/ audio{bindAttr src="view.src"} autoplay
+
+
+if view.isPlaying
+  button.pause{action "pause" target=view} ❙❙
+else
+  button.play{action "play" target=view} ▶
+
+
+if view.isLoaded
+
+  / TODO: ask Alex how to do this:
+  | <input type="range" {{action "seek" target=view on=change}} {{bindAttr value="view.currentTime" max="view.duration"}} min="0" />
+
+  / like this maybe?
+  / input{action "seek" target=view on=change} type="range" min="0"
+
+p.duration{action "toggleProperty" "showTimeLeft" target="view"}
+  if view.showTimeLeft
+    | -{{format-duration view.timeLeft}}
+  else
+    | {{format-duration view.currentTime}}

@@ -1,0 +1,15 @@
+footer class="now-playing"
+  if model
+    img.now-playing-artwork{bindAttr src="album.artwork"}
+    .now-playing-body
+      p.now-playing-details
+        span.now-playing-name = name
+        |  -
+        span.now-playing-artist = album.artist
+
+      .now-playing-player
+        App.AudioView srcBinding="url"
+
+  else
+    span.now-playing-empty
+      | Select a song to start playing.

@@ -3,3 +3,5 @@ header
     h1 BuumBox
 
 = outlet
+
+render "nowPlaying"
