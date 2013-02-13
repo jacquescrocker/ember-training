@@ -20,7 +20,4 @@ if view.isLoaded
   / input{action "seek" target=view on=change} type="range" min="0"
 
 p.duration{action "toggleProperty" "showTimeLeft" target="view"}
-  if view.showTimeLeft
-    | -{{format-duration view.timeLeft}}
-  else
-    | {{format-duration view.currentTime}}
+  = format-duration view.timeDisplay

@@ -4,7 +4,8 @@ footer class="now-playing"
     .now-playing-body
       p.now-playing-details
         span.now-playing-name = name
-        |  -
+        span.now-playing-sep style="margin:0 5px;"
+          | -
         span.now-playing-artist = album.artist
 
       .now-playing-player

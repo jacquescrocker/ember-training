@@ -3,6 +3,7 @@ App.AudioView = Ember.View.extend
 
   classNames: ["audio-control"]
 
+  # set this to the url of the song you want to play
   src: null
 
   currentTime: 0
@@ -27,9 +28,14 @@ App.AudioView = Ember.View.extend
   seek: ->
     @audioPlayer().currentTime = @seekerRange().value
 
-  timeLeft: (->
-    @get("duration") - @get("currentTime")
-  ).property("duration", "currentTime")
+  # returns either time left, or current time (in seconds)
+  timeDisplay: (->
+    if @get("showTimeLeft")
+      timeLeft = @get("duration") - @get("currentTime")
+      -timeLeft
+    else
+      @get("currentTime")
+  ).property("duration", "currentTime", "showTimeLeft")
 
   didInsertElement: ->
     @setupAudioPlayer()
