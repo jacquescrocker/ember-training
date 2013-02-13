@@ -4,11 +4,15 @@
   h2 = artist
 
 table.album-listing
-  each songs
-    tr
+  each songs itemController="song"
+    tr{bindAttr class="isCurrent:is-playing"}
       td.song-track
         span.track-number = track
-        span.play{action "playSong" this} ▶
+        if isCurrentAndPlaying
+          span.play{action "pauseSong"} ❙❙
+        else
+          span.play{action "playSong" model} ▶
+
       td.song-name = name
       td.song-duration = format-duration duration
 

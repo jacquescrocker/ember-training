@@ -9,7 +9,7 @@ footer class="now-playing"
         span.now-playing-artist = album.artist
 
       .now-playing-player
-        App.AudioView srcBinding="url"
+        App.AudioView srcBinding="url" isPlayingBinding="isPlaying"
 
   else
     span.now-playing-empty

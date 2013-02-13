@@ -24,6 +24,14 @@ App.AudioView = Ember.View.extend
 
   pause: ->
     @audioPlayer().pause()
+    @set("isPlaying", false)
+
+  isPlayingChanged: (->
+    if @get("isPlaying")
+      @audioPlayer().play()
+    else
+      @audioPlayer().pause()
+  ).observes("isPlaying")
 
   seek: ->
     @audioPlayer().currentTime = @seekerRange().value

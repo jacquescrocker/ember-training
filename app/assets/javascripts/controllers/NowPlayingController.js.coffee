@@ -1,1 +1,2 @@
-App.NowPlayingController = Ember.ObjectController.extend({})
+App.NowPlayingController = Ember.ObjectController.extend
+  isPlaying: false

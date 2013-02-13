@@ -28,3 +28,37 @@
 */
 
 step(13, "Click to Toggle Remaining Time");
+
+test("If no song is playing, the current time should not appear.", function() {
+  navigateTo("/album/1", function() {
+    shouldHaveElements(".now-playing .duration", 0)
+  });
+});
+
+test("When you play a song, the current time should appear in the Now Playing panel.", function() {
+  stop();
+  navigateTo("/album/1", function() {
+    click(".song-track:first .play")
+    $(".now-playing audio").on("loadeddata", function() {
+      start()
+      shouldHaveElements(".now-playing .duration", 1);
+      shouldHaveElement(".now-playing .duration", "0:00")
+    });
+  })
+});
+
+test("When you click on the current time, it should show the remaining time.", function() {
+  stop();
+  navigateTo("/album/1", function() {
+    click(".song-track:first .play")
+
+    $(".now-playing audio").on("loadeddata", function() {
+      start()
+      shouldHaveElements(".now-playing .duration", 1);
+
+      click(".now-playing .duration")
+      shouldHaveElement(".now-playing .duration", "-3:39")
+    });
+
+  })
+});
